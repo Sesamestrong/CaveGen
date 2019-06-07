@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cave Generator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="let hello=Math.random();Math.seedrandom(hello);console.log(hello);setLevel();makeTable();renderLevel();">
+      <h1>Generate caves from nothingness!</h1>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js'></script>
+    <table><tr><td id="heyy"></td><td><button onclick="runCavingCycle();renderLevel();">Run Caving Cycle</button>
+    <button id="toggleSim" onclick="doCycles(50,500);document.getElementById('toggleSim').style.display='none';">Run Simulation</button>
+    <button onclick="setLevel();renderLevel();">Reset Cave</button>
+    <button onclick="levelPadding=levelPadding==1?0:1;">Change Render Style</button><br>Min Stone<br>
+    <input id="minStone" value=2 min=0 max=7 type="range"><br>Max Stone<br>
+    <input id="maxStone" value=5 min=0 max=7 type="range"><br><p>Coin Burial Rate</p><br>
+    <input id="minCoin" value=3 min=0 max=7 type="range">
+    <script src="script.js"></script>
+    <form action="https://www.blockyjump.me/editor" method="POST" name="f">
+    <input type="hidden" value="" name="data">
+    <input type="button" value="Export to Blocky Jump" onclick="subForm();">
+    <input type="submit" id="submit" style="display:none;">
+    </form></td>
+    </tr></table>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+table.center{
+  margin-right:auto;
+  margin-left:auto;
+}
+#grid,td{
+  border: 0px solid;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+}
+.choice{
+  border-width:0px;
+  width:45px;
+  height:30px;
+}
